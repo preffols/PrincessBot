@@ -45,4 +45,4 @@ app.post('/', async (req, res) => {
     }
 })
 
-app.listen(5000, () => console.log('AI server started on https://princess-chatbot.onrender.com'))
+app.listen(5000, () => console.log('AI server started on https://192.168.56.1:5000'))

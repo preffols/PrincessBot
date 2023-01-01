@@ -86,7 +86,7 @@ const handleSubmit = async (e) => {
   // messageDiv.innerHTML = "..."
   loader(messageDiv)
 
-  const response = await fetch('https://princess-chatbot.onrender.com', {
+  const response = await fetch('https://192.168.56.1:5000', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
