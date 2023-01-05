@@ -4,10 +4,10 @@ import user from './assets/user.svg'
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
 
-let loadInterval
+let loadInterval;
 
 function loader(element) {
-  element.textContent = ''
+  element.textContent = '';
 
   loadInterval = setInterval(() => {
     // Update the text content of the loading indicator
@@ -86,7 +86,7 @@ const handleSubmit = async (e) => {
   // messageDiv.innerHTML = "..."
   loader(messageDiv)
 
-  const response = await fetch('https://192.168.56.1:5000', {
+  const response = await fetch('http://127.0.0.1:5000', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ const handleSubmit = async (e) => {
   })
 
   clearInterval(loadInterval)
-  messageDiv.innerHTML = " "
+  messageDiv.innerHTML = " ";
 
   if (response.ok) {
     const data = await response.json();
